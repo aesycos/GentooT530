@@ -34,7 +34,7 @@ Device Drivers  --->
 ## Configurations for Intel Centrino Advanced-N 6205 Dual Band Wirless Card
 03:00.0 Network controller: Intel Corporation Centrino Advanced-N 6205 [Taylor Peak] (rev 34)
 
-Driver: iwldvm
+Driver: iwlwifi, iwldvm
 
 Bands: 2.4 GHz/5 GHz
 
@@ -109,9 +109,45 @@ Device Drivers  --->
             < >   Simulated radio testing tool for mac80211
             < >   Wireless RNDIS USB support
 ```
+```
+Device Driver  --->
+    [*]   USB support  --->
+            ...
+        <M>   USB Wireless Device Management support
+```
 
 ## Configuration options for Sierra Wireless 3G WWAN Card
 
 Bus 003 Device 003: ID 1199:9013 Sierra Wireless, Inc. Sierra Wireless Gobi 3000 Modem device (MC8355)
 
-Driver: sierra
+Driver: sierra, usbserial
+
+```
+Device Driver  --->
+    [*]   USB support  --->
+        <M>   USB Serial Converter support  --->
+          <M>   USB Sierra Wireless Driver         
+```
+
+# Perhipherals
+
+## USB2.0/3.0 EHCI/xHCI
+
+```
+Device Driver  --->
+    [*]   USB support  --->
+        {*}   Support for Host-side USB
+        [*]   USB announce new devices
+            ...
+        <*>   USB Monitor
+              *** USB Host Controller Drivers ***
+        <*>   xHCI HCD (USB 3.0) support
+        <*>   EHCI HCD (USB 2.0) support
+```
+
+## USB Printer
+```
+Device Driver  --->
+    [*]   USB support  --->
+        <M>   USB Printer support
+```
