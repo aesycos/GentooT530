@@ -1,6 +1,7 @@
 # GentooT530
 Configs for Gentoo on a Lenovo Thinkpad T530 i7-3720QM
 ```
+$ lsusb
 Bus 002 Device 002: ID 8087:0024 Intel Corp. Integrated Rate Matching Hub
 Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 Bus 001 Device 006: ID 5986:02d2 Acer, Inc 
@@ -32,10 +33,15 @@ Device Drivers  --->
 
 ## Configurations for Intel Centrino Advanced-N 6205 Dual Band Wirless Card
 03:00.0 Network controller: Intel Corporation Centrino Advanced-N 6205 [Taylor Peak] (rev 34)
+
 Driver: iwldvm
+
 Bands: 2.4 GHz/5 GHz
+
 Max Speed: 300 Mbps
+
 WiFi: 802.11a/b/g/n
+
 Form Factor: PCIe Half MiniCard
 
 To make it work some kernel configuration is needed. The driver supports 802.11a/b/g/n/ac (depending on the device), so IEEE 802.11 should be enabled. 
@@ -105,5 +111,7 @@ Device Drivers  --->
 ```
 
 ## Configuration options for Sierra Wireless 3G WWAN Card
+
 Bus 003 Device 003: ID 1199:9013 Sierra Wireless, Inc. Sierra Wireless Gobi 3000 Modem device (MC8355)
+
 Driver: sierra
