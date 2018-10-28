@@ -131,6 +131,17 @@ Device Driver  --->
 
 # Perhipherals
 
+## Webcam Acer UVC
+Bus 001 Device 006: ID 5986:02d2 Acer, Inc
+Driver: uvcvideo
+```
+Device Driver  --->
+    <M>   Multimedia support  --->
+        [*]   Cameras/video grabbers support
+    [*]   USB support  --->
+        [ ]   USB Gadget functions
+```
+
 ## USB2.0/3.0 EHCI/xHCI
 
 ```
