@@ -16,7 +16,6 @@ Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
 ## Configuration options for Acer UVC webcam
 Bus 001 Device 006: ID 5986:02d2 Acer Inc.
-
 Driver: uvcvideo
 
 ```
