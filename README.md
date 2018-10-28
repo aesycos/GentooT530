@@ -1,7 +1,7 @@
 # GentooT530
 Configs for Gentoo on a Lenovo Thinkpad T530 i7-3720QM
-
-`Bus 002 Device 002: ID 8087:0024 Intel Corp. Integrated Rate Matching Hub
+```
+Bus 002 Device 002: ID 8087:0024 Intel Corp. Integrated Rate Matching Hub
 Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 Bus 001 Device 006: ID 5986:02d2 Acer, Inc 
 Bus 001 Device 005: ID 0a5c:21e6 Broadcom Corp. BCM20702 Bluetooth 4.0 [ThinkPad]
@@ -11,19 +11,21 @@ Bus 001 Device 002: ID 8087:0024 Intel Corp. Integrated Rate Matching Hub
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 Bus 004 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 Bus 003 Device 003: ID 1199:9013 Sierra Wireless, Inc. Sierra Wireless Gobi 3000 Modem device (MC8355)
-Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub`
+Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+```
 
 ## Configuration options for Acer UVC webcam
 Bus 001 Device 006: ID 5986:02d2 Acer, Inc
 Driver: uvcvideo
 
-`Device Drivers  --->
+```
+Device Drivers  --->
  <M> Multimedia support  --->
   [*]   Cameras/video grabbers support
   [*]   Media USB Adapters  --->
    <M>   USB Video Class (UVC)  
    [*]     UVC input events device support (NEW) `
-
+```
 
 
 # Networking
@@ -38,7 +40,8 @@ Form Factor: PCIe Half MiniCard
 
 To make it work some kernel configuration is needed. The driver supports 802.11a/b/g/n/ac (depending on the device), so IEEE 802.11 should be enabled. 
 
-`[*] Networking support  --->
+```
+[*] Networking support  --->
     [*] Wireless  --->
         <*>   cfg80211 - wireless configuration API
         [ ]     nl80211 testmode command
@@ -58,11 +61,13 @@ To make it work some kernel configuration is needed. The driver supports 802.11a
         -*-   Enable LED triggers
         [ ]   Export mac80211 internals in DebugFS
         [ ]   Trace all mac80211 debug messages
-        [ ]   Select mac80211 debugging features  ----`
+        [ ]   Select mac80211 debugging features  ---->
+```
 
 Use this driver for Intel's current wireless chips. Set it as a module <M> as shown here. Also the correct DVM or MVM option according to the Module column of the firmware table is needed. 
 
-`Device Drivers  --->
+```
+Device Drivers  --->
  
         [*] Network device support  --->
  
@@ -96,7 +101,8 @@ Use this driver for Intel's current wireless chips. Set it as a module <M> as sh
             [ ]   Texas Instrument devices
             [ ]   ZyDAS devices
             < >   Simulated radio testing tool for mac80211
-            < >   Wireless RNDIS USB support`
+            < >   Wireless RNDIS USB support
+```
 
 ## Configuration options for Sierra Wireless 3G WWAN Card
 Bus 003 Device 003: ID 1199:9013 Sierra Wireless, Inc. Sierra Wireless Gobi 3000 Modem device (MC8355)
